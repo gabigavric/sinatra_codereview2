@@ -1,0 +1,15 @@
+<% @@wordList.all.each do |word| %>
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title"><%= word.word_name %></h4>
+        <% word.get_definitions.each do |definition| %>
+            <p class="card-text"><%= definition %></p>
+        <% end %>
+        <a href="/delete/<%=word.word_name %>" class="card-link">delete word</a>
+        <a href="/add_definition/<%=word.word_name %>" class="card-link">add definition</a>
+      </div>
+    </div>
+<% end %>
+
+<div class="row col"><a href= "/add_word">Add New Definition</a></div>
+

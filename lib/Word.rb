@@ -1,20 +1,21 @@
 class Word
   @word_name
-  @defenitions = []
+  @definitions
 
-  def initialize(name)
-    @word_name = name
+  def initialize(word_name)
+    @word_name = word_name
+    @definitions = []
   end
 
-  def add_definitions(definition)
-     @defenitions.push(definition)
+  def add_definitions(word_definition)
+     @definitions.push(word_definition)
   end
 
-  def get_defentitions()
-     @defenitions
+  def get_definitions
+     @definitions
   end
 
-  def name()
+  def word_name
       @word_name
   end
 end

@@ -1,0 +1,15 @@
+<form action="/add_word" method="post">
+  <div class="form-group">
+    <label for="word">Word</label>
+    <input type="text" class="form-control" name="word_name" id="word_name" aria-describedby="wordHelp" placeholder="Enter New Word">
+    <small id="wordHelp" class="form-text text-muted">Type a new word here</small>
+  </div>
+  <div class="form-group">
+    <label for="word">Definition</label>
+    <textarea type="text" class="form-control" name="word_definition" id="word_definition" aria-describedby="definitionHelp" placeholder="Enter Definition">
+    </textarea>
+    <small id="definitionHelp" class="form-text text-muted">Write Definition Above</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
