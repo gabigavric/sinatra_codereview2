@@ -50,6 +50,7 @@ class WordList
         @dictionary.push(word)
         break
       end
+      i +=1
     end
   end
 

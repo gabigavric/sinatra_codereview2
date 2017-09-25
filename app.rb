@@ -51,15 +51,11 @@ end
 
 post('/add_definition') do
   theWord = params[:word_name]
-  if (theWord!=nil&&theWord!='')
-    theWordDefinition = params[:word_definition]
-    if (theWordDefinition!=nil&&theWordDefinition!='')
+  theWordDefinition = params[:word_definition]
+  if (theWord!=nil && theWordDefinition!=nil && theWord!='' && theWordDefinition!='')
       word = @@wordList.find(theWord)
-      if (word!=nil)
-        word.add_definitions(theWordDefinition)
-        @@wordList.update(word)
-      end
+      word.add_definitions(theWordDefinition)
+      @@wordList.update(word)
     end
-  end
   erb(:dictionary)
 end
