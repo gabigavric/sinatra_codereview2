@@ -5,7 +5,6 @@ Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
 
-
   describe('Word', {:type => :feature}) do
     it('check to see if index page rendered') do
       visit('/')
@@ -23,6 +22,13 @@ set(:show_exceptions, false)
       visit('/add_word')
       fill_in('word_name', :with => 'Run')
       click_button('Submit')
-      expect(page).to have_content('Add New Definition')
+      expect(page).to have_content('Run')
+    end
+
+    it ('delete a word from the list') do
+      visit('/dictionary')
+      expect(page).to have_content('Run')
+      click_link('delete word')
+      expect(page).to have_no_content('Run')
     end
   end
