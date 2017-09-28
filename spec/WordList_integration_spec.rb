@@ -19,12 +19,10 @@ set(:show_exceptions, false)
       expect(page).to have_content('Run')
     end
 
-    # it('delete a word from the list') do
-    #   visit('/add_word')
-    #   fill_in('word_name', :with => 'Run')
-    #   click_button('Submit')
-    #   click_link('Run')
-    #   click_button('delete word')
-    #   expect(page).to have_no_content('Run')
-    # end
+    it('add a definition to the word') do
+      visit('/add_word')
+      fill_in('word_name', :with => 'Run')
+      click_button('Submit')
+      expect(page).to have_content('Add New Definition')
+    end
   end
