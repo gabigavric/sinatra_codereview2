@@ -19,10 +19,11 @@ set(:show_exceptions, false)
     end
 
     it('add a definition to the word') do
-      visit('/add_word')
-      fill_in('word_name', :with => 'Run')
+      visit('/dictionary')
+      click_link('add definition')
+      fill_in('word_definition', :with => 'To run')
       click_button('Submit')
-      expect(page).to have_content('Run')
+      expect(page).to have_content('To run')
     end
 
     it ('delete a word from the list') do
@@ -31,4 +32,5 @@ set(:show_exceptions, false)
       click_link('delete word')
       expect(page).to have_no_content('Run')
     end
+
   end
