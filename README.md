@@ -9,7 +9,8 @@ An application that takes user input for a word and multiple definitions.
 <li>Delete</li>
 
 ## Setup
-Type 
+Paste link in browser:
+https://intense-lowlands-40739.herokuapp.com/
 
 ## License
 
